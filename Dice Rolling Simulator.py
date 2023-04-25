@@ -10,10 +10,8 @@ def load(seconds):
     '''
     Prints a line every half-second.
     '''
-    loading = ['-', '/', '|', '\\', '-',  ]
-    for i in range(len(loading)):
-        print(loading[i])
-        time.sleep(seconds)
+    print('Rolling...')
+    time.sleep(seconds)
 
 def rolling_dice():
     '''
@@ -23,14 +21,11 @@ def rolling_dice():
     dice = random.randint(1, 6)
     print('You rolled a', dice, '!')
     
-
-
 #main
 repeat = 'y'
 while repeat == 'y': #sets up the while loop; loops when "y" is entered in terminal. 
     print('Release!')
-    load(.5)
+    load(1)
     rolling_dice()
     repeat = input('Would you like to roll again? (y/n) >> ').lower()
-
-
+    print()
